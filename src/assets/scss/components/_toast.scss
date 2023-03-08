@@ -1,0 +1,39 @@
+/* toast */
+.toast {
+    width:calc(100% - 2rem);
+    padding:1rem;
+    position:fixed;
+    left:0;
+    margin:1rem;
+    transition: all .3s;
+    font-size:1.2rem;
+    color:#FFFFFF;
+    background:#6200ee;
+}
+.ui-toast{
+    z-index: 500;
+    
+    &-ready .toast{
+        display:block;
+        opacity: 0;
+        bottom:-10rem;
+
+        &.top{
+            display:block;
+            opacity: 0;
+            bottom:auto;
+            top:-10rem;
+        }
+    }
+    &-show .toast{
+        opacity: 1;
+        bottom: 0;
+
+        &.top{
+            opacity: 1;
+            bottom:auto;
+            top: 0;
+        }
+    }
+}
+

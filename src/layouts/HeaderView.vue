@@ -1,0 +1,277 @@
+<template>
+  <header class="base-header">
+    <div class="header-wrap">
+      <div class="logo">
+        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="42.000000pt" height="43.000000pt"
+          viewBox="0 0 42.000000 43.000000" preserveAspectRatio="xMidYMid meet">
+          <title>Netive UI</title>
+          <g transform="translate(0.000000,43.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+            <path d="M138 410 c-45 -13 -87 -49 -110 -93 -19 -36 -23 -62 -26 -175 l-4
+              -132 71 0 71 0 0 115 c0 110 1 117 25 140 27 28 52 31 81 11 16 -12 20 -31 24
+              -138 l5 -123 68 -3 67 -3 0 128 c0 103 -4 136 -19 169 -40 87 -154 134 -253
+              104z" />
+          </g>
+        </svg>
+        <span class="a11y-hidden">Netive UI</span>
+      </div>
+
+      <button type="button" class="fab-menu ui-nav" data-material="arrow_forward">
+        <span class="a11y-hidden">all menu</span>
+      </button>
+
+      <button type="button" class="fab-mode" data-material="light">
+        <span class="a11y-hidden">dark/light mode</span>
+      </button>
+
+      <nav class="header-nav ui-scrollbar" id="uiLNB">
+        <p class="ver">v1.0.7 (2023-01-20)</p>
+        <ul class="ui-acco dep1" data-id="exeLNB">
+          <li class="ui-acco-wrap dep1-item">
+            <div class="ui-acco-tit">
+              <button type="button" class="ui-acco-btn dep1-btn">
+                <span>Code Convention</span>
+              </button>
+            </div>
+            <div class="ui-acco-pnl">
+              <div class="ui-acco-pnl-wrap">
+                <ul class="dep2">
+                  <li class="dep2-item">
+                    <button type="button" data-href="introduction" class="dep2-btn"><span>Introduction</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="naming" class="dep2-btn"><span>Naming</span></button>
+                  </li>
+
+                  <li class="dep2-item">
+                    <button type="button" data-href="units" class="dep2-btn"><span>Units</span></button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="ui-acco-wrap dep1-item">
+            <div class="ui-acco-tit">
+              <button type="button" class="ui-acco-btn dep1-btn">
+                <span>Contents Design</span>
+              </button>
+            </div>
+            <div class="ui-acco-pnl">
+              <div class="ui-acco-pnl-wrap">
+                <ul class="dep2">
+                  <li class="dep2-item">
+                    <router-link class="dep2-btn" to="/">Home</router-link>
+                  </li>
+                  <li class="dep2-item">
+                    <router-link class="dep2-btn" to="/about">About</router-link>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="typography" class="dep2-btn"><span>Typography</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="color" class="dep2-btn"><span>Color</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="gap" class="dep2-btn"><span>Gap</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="list" class="dep2-btn"><span>List</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="button" class="dep2-btn"><span>Button</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="icon" class="dep2-btn"><span>Icon</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="layout" class="dep2-btn"><span>Layout</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="table" class="dep2-btn"><span>Table</span></button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="ui-acco-wrap dep1-item">
+            <div class="ui-acco-tit">
+              <button type="button" class="ui-acco-btn dep1-btn">
+                <span>Components Common</span>
+              </button>
+            </div>
+            <div class="ui-acco-pnl">
+              <div class="ui-acco-pnl-wrap">
+                <ul class="dep2">
+                  <li class="dep2-item">
+                    <button type="button" data-href="loading" class="dep2-btn"><span>Loading</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="scrollBar" class="dep2-btn"><span>Scroll Bar</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="scrollMove" class="dep2-btn"><span>Scroll Move</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="popup" class="dep2-btn"><span>Popup</span></button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="ui-acco-wrap dep1-item">
+            <div class="ui-acco-tit">
+              <button type="button" class="ui-acco-btn dep1-btn">
+                <span>Components Form</span>
+              </button>
+            </div>
+            <div class="ui-acco-pnl">
+              <div class="ui-acco-pnl-wrap">
+                <ul class="dep2">
+                  <li class="dep2-item">
+                    <button type="button" data-href="formLayout" class="dep2-btn"><span>Form Layout</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="input" class="dep2-btn"><span>Input</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="datePicker" class="dep2-btn"><span>Date Picke</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="time" class="dep2-btn"><span>Time</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="range" class="dep2-btn"><span>Range</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="fileUpload" class="dep2-btn"><span>File Upload</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="selection" class="dep2-btn"><span>Selection</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="select" class="dep2-btn"><span>Select</span></button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="ui-acco-wrap dep1-item">
+            <div class="ui-acco-tit">
+              <button type="button" class="ui-acco-btn dep1-btn">
+                <span>Components Content</span>
+              </button>
+            </div>
+            <div class="ui-acco-pnl">
+              <div class="ui-acco-pnl-wrap">
+                <ul class="dep2">
+                  <li class="dep2-item">
+                    <button type="button" data-href="accordion" class="dep2-btn"><span>Accordion</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="tab" class="dep2-btn"><span>Tab</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="dropdown" class="dep2-btn"><span>Dropdown</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="modal" class="dep2-btn"><span>Modal</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="toast" class="dep2-btn"><span>Toast</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="tooltip" class="dep2-btn"><span>Tooltip</span></button>
+                  </li>
+
+                  <li class="dep2-item">
+                    <button type="button" data-href="floating" class="dep2-btn"><span>Floating</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="floatingRange" class="dep2-btn"><span>Floating Range</span></button>
+                  </li>
+
+                  <li class="dep2-item">
+                    <button type="button" data-href="parallax" class="dep2-btn"><span>Parallax Scroll</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="tableScroll" class="dep2-btn"><span>Table Scroll</span></button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="ui-acco-wrap dep1-item">
+            <div class="ui-acco-tit">
+              <button type="button" class="ui-acco-btn dep1-btn">
+                <span>Components Item</span>
+              </button>
+            </div>
+            <div class="ui-acco-pnl">
+              <div class="ui-acco-pnl-wrap">
+                <ul class="dep2">
+                  <li class="dep2-item">
+                    <button type="button" data-href="jsonCodingList" class="dep2-btn"><span>JSON Coding
+                        List</span></button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="ui-acco-wrap dep1-item">
+            <div class="ui-acco-tit">
+              <button type="button" class="ui-acco-btn dep1-btn">
+                <span>Web Accessibility</span>
+              </button>
+            </div>
+            <div class="ui-acco-pnl">
+              <div class="ui-acco-pnl-wrap">
+                <ul class="dep2">
+                  <li class="dep2-item">
+                    <button type="button" data-href="a11y" class="dep2-btn"><span>웹 접근성 가이드</span></button>
+                  </li>
+                  <li class="dep2-item">
+                    <button type="button" data-href="a11y1" class="dep2-btn"><span>WAI-ARIA</span></button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="ui-acco-wrap dep1-item">
+            <div class="ui-acco-tit">
+              <button type="button" class="ui-acco-btn dep1-btn">
+                <span>Memory</span>
+              </button>
+            </div>
+            <div class="ui-acco-pnl">
+              <div class="ui-acco-pnl-wrap">
+                <ul class="dep2">
+                  <li class="dep2-item">
+                    <button type="button" data-href="issue" class="dep2-btn"><span>Issue</span></button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</template>
+<script>
+export default {
+  components: {},
+  data() {
+    return {
+      sampleData: ''
+    }
+  },
+  setup() { },
+  created() { },
+  mounted() { },
+  unmounted() { },
+  methods: {}
+}
+</script>

@@ -1,0 +1,124 @@
+/* ui tooltip:z-index 300 ~ 399 */
+.ui-tooltip {
+    visibility: hidden;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 1px solid $gray100;
+    background: $gray50;
+    box-shadow: 0 .2rem 1rem rgba(0,0,0,0.1);
+    text-align: justify;
+
+    &[aria-hidden="false"]{
+        visibility: visible;
+        animation-name: fadeIn;
+        animation-duration: .2s;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+    &[aria-hidden="true"]{
+        visibility: visible;
+        animation-name: fadeOut;
+        animation-duration: .2s;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+   
+    &.hover {
+        z-index: 402;
+        .ui-tooltip-close {display: none;}
+    }
+    &.fix { z-index: 401;}
+    &-btn {cursor: help;}
+    &-close {
+        position: absolute;
+        top:0; 
+        right:0;
+        width:2rem;
+        height: 2rem;
+        background-color: $gray900;
+    }
+    &-tit {
+        font-size: 1.6rem;
+    }
+  
+    .ui-tooltip-arrow {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        background: $gray50;
+        border-top: 1px solid  $gray100;
+        border-right: 1px solid  $gray100;
+    }
+    &[data-ps="top"] .ui-tooltip-arrow {
+        left: 0;
+        bottom: -.6rem;
+        transform: rotate(135deg);
+        margin-left: -.6rem
+    }
+    &[data-ps="bottom"] .ui-tooltip-arrow {
+        left: 0;
+        top: -.6rem;
+        transform: rotate(-45deg);
+        margin-left: -.6rem
+    }
+    &.ps-lt .ui-tooltip-arrow {
+        left: 0;
+        bottom: -.6rem;
+        transform: rotate(135deg);
+        margin-left: 1rem
+    }
+    &.ps-rt .ui-tooltip-arrow {
+        right: 0;
+        bottom: -.6rem;
+        transform: rotate(135deg);
+        margin-right: 1rem
+    }
+    &.ps-lb .ui-tooltip-arrow {
+        left: 0;
+        top: -.6rem;
+        transform: rotate(-45deg);
+        margin-left: 1rem
+    }
+    &.ps-rb .ui-tooltip-arrow {
+        right: 0;
+        top: -.6rem;
+        transform: rotate(-45deg);
+        margin-right: 1rem
+    }
+}
+button.ui-tooltip-btn {
+    display: inline-block;
+    position: relative;
+    width: 1.4rem;
+    height: 1.4rem;
+    min-width: 1.4rem;
+    min-height: 1.4rem;
+    max-width: 1.4rem;
+    max-height: 1.4rem;
+    border-radius: .7rem;
+    color: transparent;
+    overflow: hidden;
+    font-size: xx-small;
+    border: 1px solid $gray500;
+    background: $white;
+    &:after {
+        content: "?";
+        position: absolute;
+        top: -1px;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: 1rem;
+        font-weight: 700;
+        color: $gray500;
+    }
+}
