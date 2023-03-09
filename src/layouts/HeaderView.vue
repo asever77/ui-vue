@@ -15,241 +15,24 @@
         <span class="a11y-hidden">Netive UI</span>
       </div>
 
-      <button type="button" class="fab-menu ui-nav" data-material="arrow_forward">
-        <span class="a11y-hidden">all menu</span>
-      </button>
+      <button type="button" class="fab-menu ui-nav" data-material="arrow_forward" @click="menuToggle" aria-label="all menu"></button>
 
-      <button type="button" class="fab-mode" data-material="light">
-        <span class="a11y-hidden">dark/light mode</span>
-      </button>
+      <button type="button" class="fab-mode" data-material="light" aria-label="dark/light mode"></button>
 
       <nav class="header-nav ui-scrollbar" id="uiLNB">
-        <p class="ver">v1.0.7 (2023-01-20)</p>
+        <p class="ver">{{ version }}</p>
         <ul class="ui-acco dep1" data-id="exeLNB">
-          <li class="ui-acco-wrap dep1-item">
+          <li class="ui-acco-wrap dep1-item" :key="i" v-for="(name, key, i) in meunMap">
             <div class="ui-acco-tit">
               <button type="button" class="ui-acco-btn dep1-btn">
-                <span>Code Convention</span>
+                <span>{{ key }}</span>
               </button>
             </div>
             <div class="ui-acco-pnl">
               <div class="ui-acco-pnl-wrap">
-                <ul class="dep2">
-                  <li class="dep2-item">
-                    <button type="button" data-href="introduction" class="dep2-btn"><span>Introduction</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="naming" class="dep2-btn"><span>Naming</span></button>
-                  </li>
-
-                  <li class="dep2-item">
-                    <button type="button" data-href="units" class="dep2-btn"><span>Units</span></button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="ui-acco-wrap dep1-item">
-            <div class="ui-acco-tit">
-              <button type="button" class="ui-acco-btn dep1-btn">
-                <span>Contents Design</span>
-              </button>
-            </div>
-            <div class="ui-acco-pnl">
-              <div class="ui-acco-pnl-wrap">
-                <ul class="dep2">
-                  <li class="dep2-item">
-                    <router-link class="dep2-btn" to="/">Home</router-link>
-                  </li>
-                  <li class="dep2-item">
-                    <router-link class="dep2-btn" to="/about">About</router-link>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="typography" class="dep2-btn"><span>Typography</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="color" class="dep2-btn"><span>Color</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="gap" class="dep2-btn"><span>Gap</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="list" class="dep2-btn"><span>List</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="button" class="dep2-btn"><span>Button</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="icon" class="dep2-btn"><span>Icon</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="layout" class="dep2-btn"><span>Layout</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="table" class="dep2-btn"><span>Table</span></button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="ui-acco-wrap dep1-item">
-            <div class="ui-acco-tit">
-              <button type="button" class="ui-acco-btn dep1-btn">
-                <span>Components Common</span>
-              </button>
-            </div>
-            <div class="ui-acco-pnl">
-              <div class="ui-acco-pnl-wrap">
-                <ul class="dep2">
-                  <li class="dep2-item">
-                    <button type="button" data-href="loading" class="dep2-btn"><span>Loading</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="scrollBar" class="dep2-btn"><span>Scroll Bar</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="scrollMove" class="dep2-btn"><span>Scroll Move</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="popup" class="dep2-btn"><span>Popup</span></button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="ui-acco-wrap dep1-item">
-            <div class="ui-acco-tit">
-              <button type="button" class="ui-acco-btn dep1-btn">
-                <span>Components Form</span>
-              </button>
-            </div>
-            <div class="ui-acco-pnl">
-              <div class="ui-acco-pnl-wrap">
-                <ul class="dep2">
-                  <li class="dep2-item">
-                    <button type="button" data-href="formLayout" class="dep2-btn"><span>Form Layout</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="input" class="dep2-btn"><span>Input</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="datePicker" class="dep2-btn"><span>Date Picke</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="time" class="dep2-btn"><span>Time</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="range" class="dep2-btn"><span>Range</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="fileUpload" class="dep2-btn"><span>File Upload</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="selection" class="dep2-btn"><span>Selection</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="select" class="dep2-btn"><span>Select</span></button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-
-          <li class="ui-acco-wrap dep1-item">
-            <div class="ui-acco-tit">
-              <button type="button" class="ui-acco-btn dep1-btn">
-                <span>Components Content</span>
-              </button>
-            </div>
-            <div class="ui-acco-pnl">
-              <div class="ui-acco-pnl-wrap">
-                <ul class="dep2">
-                  <li class="dep2-item">
-                    <button type="button" data-href="accordion" class="dep2-btn"><span>Accordion</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="tab" class="dep2-btn"><span>Tab</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="dropdown" class="dep2-btn"><span>Dropdown</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="modal" class="dep2-btn"><span>Modal</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="toast" class="dep2-btn"><span>Toast</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="tooltip" class="dep2-btn"><span>Tooltip</span></button>
-                  </li>
-
-                  <li class="dep2-item">
-                    <button type="button" data-href="floating" class="dep2-btn"><span>Floating</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="floatingRange" class="dep2-btn"><span>Floating Range</span></button>
-                  </li>
-
-                  <li class="dep2-item">
-                    <button type="button" data-href="parallax" class="dep2-btn"><span>Parallax Scroll</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="tableScroll" class="dep2-btn"><span>Table Scroll</span></button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-
-          <li class="ui-acco-wrap dep1-item">
-            <div class="ui-acco-tit">
-              <button type="button" class="ui-acco-btn dep1-btn">
-                <span>Components Item</span>
-              </button>
-            </div>
-            <div class="ui-acco-pnl">
-              <div class="ui-acco-pnl-wrap">
-                <ul class="dep2">
-                  <li class="dep2-item">
-                    <button type="button" data-href="jsonCodingList" class="dep2-btn"><span>JSON Coding
-                        List</span></button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-
-          <li class="ui-acco-wrap dep1-item">
-            <div class="ui-acco-tit">
-              <button type="button" class="ui-acco-btn dep1-btn">
-                <span>Web Accessibility</span>
-              </button>
-            </div>
-            <div class="ui-acco-pnl">
-              <div class="ui-acco-pnl-wrap">
-                <ul class="dep2">
-                  <li class="dep2-item">
-                    <button type="button" data-href="a11y" class="dep2-btn"><span>웹 접근성 가이드</span></button>
-                  </li>
-                  <li class="dep2-item">
-                    <button type="button" data-href="a11y1" class="dep2-btn"><span>WAI-ARIA</span></button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-
-          <li class="ui-acco-wrap dep1-item">
-            <div class="ui-acco-tit">
-              <button type="button" class="ui-acco-btn dep1-btn">
-                <span>Memory</span>
-              </button>
-            </div>
-            <div class="ui-acco-pnl">
-              <div class="ui-acco-pnl-wrap">
-                <ul class="dep2">
-                  <li class="dep2-item">
-                    <button type="button" data-href="issue" class="dep2-btn"><span>Issue</span></button>
+                <ul class="dep2"  >
+                  <li class="dep2-item" :key="i" v-for="(name, key2, i) in meunMap[key]">
+                    <router-link class="dep2-btn" :to="name.link">{{ key2 }}</router-link>
                   </li>
                 </ul>
               </div>
@@ -260,19 +43,86 @@
     </div>
   </header>
 </template>
+
 <script>
 export default {
   components: {},
   data() {
     return {
-      sampleData: ''
+      meunMap: {
+        convention: {
+          introduction: { name: 'introduction', link: '/' },
+          naming: { name: 'naming', link: '/naming' },
+          units: { name: 'units', link: '/units' }
+        },
+        contents: {
+          typography: { name: 'typography', link: '/typography' },
+          color: { name: 'color', link: '/color' },
+          gap: { name: 'gap', link: '/gap' },
+          icon: { name: 'icon', link: '/icon' },
+          table: { name: 'table', link: '/table' },
+          list: { name: 'list', link: '/list' },
+          layout: { name: 'layout', link: '/layout' },
+          button: { name: 'button', link: '/button' }
+        },
+        components: {
+          formLayout: { name: 'formLayout', link: '/formLayout' },
+          input: { name: 'input', link: '/input' },
+          accordion: { name: 'accordion', link: '/accordion' },
+          dropdown: { name: 'dropdown', link: '/dropdown' },
+          floating: { name: 'floating', link: '/floating' },
+          floatingRange: { name: 'floatingRange', link: '/floatingRange' },
+          modal: { name: 'modal', link: '/modal' },
+          scrollBar: { name: 'scrollBar', link: '/scrollBar' },
+          loading: { name: 'loading', link: '/loading' },
+          tab: { name: 'tab', link: '/tab' },
+          tableScroll: { name: 'tableScroll', link: '/tableScroll' },
+          popup: { name: 'popup', link: '/popup' },
+          tooltip: { name: 'tooltip', link: '/tooltip' },
+          datePicker: { name: 'datePicker', link: '/datePicker' },
+          select: { name: 'select', link: '/select' },
+          selection: { name: 'selection', link: '/selection' },
+          toast: { name: 'toast', link: '/toast' },
+          parallax: { name: 'parallax', link: '/parallax' },
+          scrollMove: { name: 'scrollMove', link: '/scrollMove' },
+          jsonCodingList: { name: 'jsonCodingList', link: '/jsonCodingList' },
+          fileUpload: { name: 'fileUpload', link: '/fileUpload' },
+          range: { name: 'range', link: '/range' },
+          slide: { name: 'slide', link: '/slide' },
+          time: { name: 'time', link: '/time' }
+        },
+        a11y: {
+          a11y: { name: 'a11y', link: '/a11y' },
+          a11y1: { name: 'a11y1', link: '/a11y1' },
+          a11y2: { name: 'a11y2', link: '/a11y2' },
+          a11y3: { name: 'a11y3', link: '/a11y3' },
+          a11y4: { name: 'a11y4', link: '/a11y4' }
+        },
+        memory: {
+          issue: { name: 'issue', link: '/issue' }
+        }
+      },
+      navOpen: false,
+      version: 'v1.0.7 (2023-01-20)'
     }
   },
   setup() { },
   created() { },
   mounted() { },
   unmounted() { },
-  methods: {}
+  methods: {
+    menuToggle() {
+      const elBody = document.querySelector('body')
+
+      if (!this.navOpen) {
+        elBody.classList.add('nav-open')
+        this.navOpen = true
+      } else {
+        elBody.classList.remove('nav-open')
+        this.navOpen = false
+      }
+    }
+  }
 }
 </script>
 <style lang="scss" src="@/assets/scss/_main.scss"></style>

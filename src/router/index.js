@@ -4,7 +4,7 @@ import IntroductionView from '../views/convention/IntroductionView'
 const routes = [
   {
     path: '/',
-    name: 'intro',
+    name: 'introduction',
     component: IntroductionView
   },
   {
