@@ -1,0 +1,22 @@
+<template>
+  <footer class="base-footer">
+    <!--<p>이 저작물은 크리에이티브 커먼즈 저작자표시-비영리-동일조건변경허락 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">3.0 Unported 라이선스</a>에 따라 이용할 수 있습니다.</p>-->
+    <p>Designed and built by <a href="mailTo:minnim1977@naver.com">@Hyeonmin Jo</a>(Netive UI개발그룹).</p>
+  </footer>
+</template>
+<script>
+export default {
+  components: {},
+  data() {
+    return {
+      sampleData: ''
+    }
+  },
+  setup() { },
+  created() { },
+  mounted() { },
+  unmounted() { },
+  methods: {}
+}
+</script>
+<style lang="scss" src="@/assets/scss/_main.scss"></style>

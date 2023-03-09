@@ -1,13 +1,20 @@
 <template>
-  <HeaderView/>
-  <router-view/>
+  <div class="base-wrap">
+    <HeaderView/>
+    <div class="base-body">
+      <router-view/>
+    </div>
+    <FooterView/>
+  </div>
 </template>
 <script>
 import HeaderView from '@/layouts/HeaderView.vue'
+import FooterView from '@/layouts/FooterView.vue'
 
 export default {
   components: {
-    HeaderView
+    HeaderView,
+    FooterView
   },
   data() {
     return {
@@ -21,26 +28,3 @@ export default {
   methods: {}
 }
 </script>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>

@@ -1,0 +1,222 @@
+<template>
+   <main class="base-main">
+    <div class="tit-wrap">
+      <h1 class="tit-l">Introduction</h1>
+    </div>
+
+    <article class="wrap-article">
+      <h2 class="tit-m">HTML</h2>
+      <p>
+        HTML(Hypertext Markup Language)는 웹페이지가 어떻게 구조화되어 있는지 브라우저가 이해할 수 있는 마크업 언어이다.
+        HTML은 elements로 구성되어 있으며, Block level element와 Inline element 두가지 종류로 나눌 수 있다.
+        <a href="https://html.spec.whatwg.org/multipage/indices.html#elements-3" target="_blank" title="HTML 관련 정보">HTML
+          상세정보</a>
+      </p>
+      <p class="mt-x1">
+        프로그래밍 언어가 아니지만 웹페이지의 기초가 되는 구조로 중요한 역활을 하고 있다. 효율적이고 잘 설계된 마크업 구조에서 프로그래밍의 최대한의 효과와 유지보수 및 확장 비용 최소화가 이루어진다.
+      </p>
+
+      <section class="wrap-section">
+        <h3 class="tit-s">HTML 문서의 구조</h3>
+        <dl class="bul-dot">
+          <div>
+            <dt>&lt;!doctype html&gt;</dt>
+            <dd>유효한 문서 형식을 나타내는 짧은 문장</dd>
+          </div>
+          <div>
+            <dt>&lt;html&gt;&lt;/html&gt;</dt>
+            <dd>전체 페이지의 콘텐츠를 포함하는 기본 요소</dd>
+          </div>
+          <div>
+            <dt>&lt;head&gt;&lt;/head&gt;</dt>
+            <dd>홈페이지 이용자에게는 보이지 않지만 검색 결과에 노출 될 키워드, 홈페이지 설명, CSS 스타일, character setdeclaration 등 HTML 페이지의 모든 내용을 담고 있는
+              요소</dd>
+          </div>
+          <div>
+            <dt>&lt;meta charset="utf-8"&gt;</dt>
+            <dd>HTML 문서의 문자 인코딩 설정을 하는 요소로 기본적으로 전세계의 언어에 대한 대부분의 문자가 포함된 UTF-8로 설정하면 페이지에 포함된 모든 텍스트 내용을 처리하여 추후 문자 인코딩
+              관련 문제발생을 방지 할 수 있다.</dd>
+          </div>
+          <div>
+            <dt>&lt;title&gt;&lt;/title&gt;</dt>
+            <dd>페이지의 제목이 설정되면 브라우저 탭에 표시된다.</dd>
+          </div>
+          <div>
+            <dt>&lt;body&gt;&lt;/body&gt;</dt>
+            <dd>텍스트, 이미지, 재생 가능한 오디오 트랙, 비디오 등 페이지에 표시되는 모든 콘텐츠가 들어가는 요소</dd>
+          </div>
+        </dl>
+
+        <pre class="box-code mt-x4"><code class="html">
+          <tag-class>&lt;!doctype html&gt;</tag-class>
+          <tag-class>&lt;html lang="ko"&gt;</tag-class>
+            <tag-class>&lt;head&gt;</tag-class>
+              <tag-class>&lt;meta charset="utf-8"&gt;</tag-class>
+              &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+              &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+              &lt;link rel="stylesheet" href="../resources/css/main.css"&gt;
+              <tag-class>&lt;title&gt;page title&lt;/title&gt;</tag-class>
+            <tag-class>&lt;/head&gt;</tag-class>
+
+            <tag-class>&lt;body&gt;</tag-class>
+              &lt;div class="base-skip"&gt;&lt;/div&gt;
+              &lt;div class="base-wrap"&gt;
+                &lt;header class="base-header"&gt;&lt;/header&gt;
+                &lt;div class="base-body"&gt;
+                  &lt;aside class="base-aside"&gt;&lt;/aside&gt;
+                  &lt;main class="base-main"&gt;&lt;/main&gt;
+                &lt;/div&gt;
+                &lt;footer class="base-footer"&gt;&lt;/footer&gt;
+              &lt;/div&gt;
+              &lt;script src="../resources/js/ui.global.js"&gt;&lt;/script&gt;
+              &lt;script src="../resources/js/ui.common.js"&gt;&lt;/script&gt;
+              &lt;script&gt;
+              ((win, doc, undefined) => {
+                doc.addEventListener("DOMContentLoaded", () => {
+                  여기에 실행할 내용 입력
+                });
+              })(window, document);
+              &lt;/script&gt;
+            <tag-class>&lt;/body&gt;</tag-class>
+          <tag-class>&lt;/html&gt;</tag-class>
+        </code></pre>
+      </section>
+
+    </article>
+
+    <article class="wrap-article">
+      <h2 class="tit-m">Javascript</h2>
+      <ul class="bul-dot">
+        <li>전역변수를 최대한 사용하지 않기 위해 항상 즉시 실행 함수 (IIFEI, Immediately Invoked Function Expression)를 선언하여 사용한다.</li>
+        <li>'use strict' 로 항상 엄격 모드에서 사용하여 잠재적인 오류를 막아준다.</li>
+      </ul>
+      <pre class="box-code mt-x4"><code class="html">
+        <tag-comment>//Javascript in page</tag-comment>
+        &lt;script&gt;
+        ((win, doc, undefined) => {
+
+          'use strict';
+
+          doc.addEventListener("DOMContentLoaded", () => {
+            여기에 실행할 내용 입력
+          });
+        })(window, document);
+        &lt;/script&gt;
+
+        <tag-comment>//Javascript in js</tag-comment>
+        </code></pre>
+    </article>
+
+    <article class="wrap-article">
+      <h2 class="tit-m">Z-index</h2>
+      <p>
+        2차원의 X,Y축의 레이아웃 뿐만 아니라 3차원의 Z축에 대한 계획이 없다면 혼란스러운 사이트 개발을 경험하게 될 것이다.<br>
+        체계적이고 정리된 구조를 위해 몇가지 규칙을 정의한다. <br>
+        구조를 설계하며 주의할 점은 부모영역의 overflow:hidden요소와 z-index값의 범위로 인한 z축의 위치 한계가 있는 문제가 있다. 체계적인 z-index를 구성하기 위해 크게 A, B
+        Level로 나누어 진행한다.
+      </p>
+
+      <div class="tbl-base type-zindex tbody-stripes mt-x2">
+        <table>
+          <caption>
+            컨텐츠에 따른 Z-index 값 범위에 대한 정보입니다.
+          </caption>
+          <colgroup>
+            <col class="col-level">
+            <col class="col-name">
+            <col class="col-default">
+            <col class="col-desc">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">Level</th>
+              <th scope="col">Name</th>
+              <th scope="col">Default</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="8">A</th>
+              <th scope="row" class="ta-l">.base-wrap</th>
+              <td>0</td>
+              <td>base content (Level B group)</td>
+            </tr>
+
+            <tr>
+              <th scope="row" class="ta-l">.ui-modal</th>
+              <td>100~199</td>
+              <td>modal content</td>
+            </tr>
+            <tr>
+              <th scope="row" class="ta-l">.ui-drop-pnl</th>
+              <td>200</td>
+              <td>dropdown content</td>
+            </tr>
+            <tr>
+              <th scope="row" class="ta-l">.ui-time-modal, <br>.sheet-bottom</th>
+              <td>300</td>
+              <td>time layer, datepicker layer popup</td>
+            </tr>
+
+            <tr>
+              <th scope="row" class="ta-l">.ui-tooltip</th>
+              <td>400</td>
+              <td>tooltip content</td>
+            </tr>
+            <tr>
+              <th scope="row" class="ta-l">.ui-toast</th>
+              <td>500</td>
+              <td>toast layer popup</td>
+            </tr>
+            <tr>
+              <th scope="row" class="ta-l">.ui-modal.type-system</th>
+              <td>600~699</td>
+              <td>system layer popup</td>
+            </tr>
+
+            <tr>
+              <th scope="row" class="ta-l">.base-skip</th>
+              <td>999</td>
+              <td>skip navigation</td>
+            </tr>
+          </tbody>
+
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="3">B</th>
+              <th scope="row" class="ta-l">.base-wrap &gt; .base-header</th>
+              <td>20</td>
+              <td>header contents</td>
+            </tr>
+            <tr>
+              <th scope="row" class="ta-l">.base-wrap &gt; .base-body</th>
+              <td>10</td>
+              <td>main contents</td>
+            </tr>
+            <tr>
+              <th scope="row" class="ta-l">.base-wrap &gt; .base-footer</th>
+              <td>0</td>
+              <td>footer content</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+  </main>
+</template>
+<script>
+export default {
+  components: {},
+  data() {
+    return {
+      sampleData: ''
+    }
+  },
+  setup() { },
+  created() { },
+  mounted() { },
+  unmounted() { },
+  methods: {}
+}
+</script>

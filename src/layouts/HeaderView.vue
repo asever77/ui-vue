@@ -275,3 +275,4 @@ export default {
   methods: {}
 }
 </script>
+<style lang="scss" src="@/assets/scss/_main.scss"></style>
