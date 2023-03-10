@@ -1,5 +1,192 @@
 <template>
-  <div></div>
+  <main class="base-main">
+    <div class="tit-wrap">
+      <h1 class="tit-l">Tab</h1>
+    </div>
+
+    <article class="wrap-article">
+      <h2 class="tit-m">Examples</h2>
+      <div class="box-guide">
+        <div class="ui-tab type-scroll " data-id="exeTab1">
+          <guide></guide>
+          <div class="ui-tab-btns">
+            <guide2></guide2>
+            <div class="wrap-group">
+              <button type="button" data-tab="0" data-callback="callbackTab1" class="ui-tab-btn"><span>탭1</span></button>
+              <button type="button" data-tab="1" data-callback="callbackTab2" class="ui-tab-btn"><span>탭2</span></button>
+              <button type="button" data-tab="2" data-callback="callbackTab3" class="ui-tab-btn"><span>탭3</span></button>
+              <guide2></guide2>
+            </div>
+          </div>
+          <div class="ui-tab-pnls">
+            <guide2></guide2>
+            <section class="ui-tab-pnl" data-tab="1">
+              <guide2></guide2>
+              <h2 class="tit-s ui-tab-tit">탭2 title</h2>
+              <p>탭2 content</p>
+              <a href="#">더보기</a>
+            </section>
+            <section class="ui-tab-pnl" data-tab="0">
+              <h2 class="tit-s ui-tab-tit">탭1 title</h2>
+              <p>탭1 content</p>
+              <a href="#">더보기</a>
+
+              <!-- tab in tab -->
+              <div class="ui-tab mt-x3" data-id="exeTab4">
+                <div class="ui-tab-btns ui-scrollbar">
+                  <div class="wrap-group">
+                    <button type="button" class="ui-tab-btn"><span>주유/정비</span></button>
+                    <button type="button" class="ui-tab-btn"><span>외식</span></button>
+                    <button type="button" class="ui-tab-btn"><span>편의/쇼핑</span></button>
+                    <button type="button" class="ui-tab-btn"><span>영화/도서</span></button>
+                    <button type="button" class="ui-tab-btn"><span>보험/금융</span></button>
+                    <button type="button" class="ui-tab-btn"><span>게임</span></button>
+                    <button type="button" class="ui-tab-btn"><span>문화</span></button>
+                    <button type="button" class="ui-tab-btn"><span>여행</span></button>
+                  </div>
+                </div>
+                <div class="ui-tab-pnls">
+                  <section class="ui-tab-pnl">
+                    <h2 class="tit-s ui-tab-tit">주유/정비 내용</h2>
+                  </section>
+                </div>
+              </div>
+              <!-- //tab in tab -->
+
+            </section>
+            <section class="ui-tab-pnl" data-tab="2">
+              <h2 class="tit-s ui-tab-tit">탭3 title</h2>
+              <p>탭3 content</p>
+              <a href="#">더보기</a>
+            </section>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="wrap-article">
+      <h2 class="tit-m">Source Code</h2>
+
+      <section class="wrap-section">
+        <h3 class="tit-s">HTML</h3>
+
+        <pre class="box-code"><code class="html">
+버튼마다 개별 콜백 설정
+&lt;button type="button" <tag-class>data-callback="callbackTab1"</tag-class> ...>
+&lt;button type="button" <tag-class>data-callback="callbackTab2"</tag-class> ...>
+<tag-class>netive.callback.callbackTab1 = () => {
+  ....
+  콜백1 실행
+}</tag-class>
+<tag-class>netive.callback.callbackTab2 = () => {
+  ....
+  콜백2 실행
+}</tag-class>
+
+&lt;div class="ui-tab" data-id="exeTab1"&gt;
+  &lt;div class="ui-tab-btns"&gt;
+    &lt;div class="wrap-group"&gt;
+      &lt;button type="button" data-tab="0" data-callback="callbackTab1" class="ui-tab-btn"&gt;&lt;span&gt;탭1&lt;/span&gt;&lt;/button&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="ui-tab-pnls"&gt;
+    &lt;section class="ui-tab-pnl" data-tab="0"&gt;
+      &lt;h3 class="ui-tab-tit"&gt;탭2 title&lt;/h3&gt;
+    &lt;/section&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+      </section>
+
+      <section class="wrap-section">
+        <h3 class="tit-s">Javascript</h3>
+        <pre class="box-code"><code class="javascript">
+netive.tab.init({
+  id:'exeTab1',
+  current:0,
+  dynamic: false,
+  callback:function(v){
+    console.log(v);
+  }
+});
+
+netive.tab.toggle({
+  id:'exeTab1',
+  current:0,
+  callback:function(v){
+    console.log(v);
+  }
+});
+        </code></pre>
+
+        <div class="tbl-base type-option mt-x2">
+          <table>
+            <caption>옵션 설명</caption>
+            <colgroup>
+              <col class="n1">
+              <col class="n2">
+              <col class="n3">
+              <col class="n4">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">Options</th>
+                <th scope="col">Type</th>
+                <th scope="col">Default</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="nec">
+                <th scope="row">id:</th>
+                <td>[string]</td>
+                <td>'name'</td>
+                <td>(필수) ui-tab의 아이디명 기입</td>
+              </tr>
+              <tr>
+                <th scope="row">current:</th>
+                <td>[number]</td>
+                <td>0</td>
+                <td>열린패널 선택</td>
+              </tr>
+              <tr>
+                <th scope="row">dynamic:</th>
+                <td>[boolean]</td>
+                <td>false</td>
+                <td>
+                  <ul class="bul-dot">
+                    <li>true: 동적으로 하나의 패널안에 컨텐츠 변경</li>
+                    <li>false: 패널별 컨텐츠</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">callback:</th>
+                <td>[function]</td>
+                <td>function</td>
+                <td>콜백값으로 아이디와 현재선택 index값</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4 class="tit-xs mt-x4">URl parameter</h4>
+        <pre class="box-code"><code class="html">
+single 선택
+?tab=1
+탭아이디*선택
+
+dual 선택
+?tab=exeTab1*0+exeTab1_2*1+exeTab2*1
+탭아이디*선택+탭아이디*선택....
+주의 : tab의 아이디를 '*'이 들어가는 이름으로 설정하면 안된다.
+        </code></pre>
+      </section>
+    </article>
+
+  </main>
 </template>
 <script>
 export default {
@@ -9,10 +196,10 @@ export default {
       sampleData: ''
     }
   },
-  setup() {},
-  created() {},
-  mounted() {},
-  unmounted() {},
+  setup() { },
+  created() { },
+  mounted() { },
+  unmounted() { },
   methods: {}
 }
 </script>
