@@ -48,37 +48,37 @@
         </dl>
 
         <pre class="box-code mt-x4"><code class="html">
-          <tag-class>&lt;!doctype html&gt;</tag-class>
-          <tag-class>&lt;html lang="ko"&gt;</tag-class>
-            <tag-class>&lt;head&gt;</tag-class>
-              <tag-class>&lt;meta charset="utf-8"&gt;</tag-class>
-              &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
-              &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-              &lt;link rel="stylesheet" href="../resources/css/main.css"&gt;
-              <tag-class>&lt;title&gt;page title&lt;/title&gt;</tag-class>
-            <tag-class>&lt;/head&gt;</tag-class>
+<tag-class>&lt;!doctype html&gt;</tag-class>
+<tag-class>&lt;html lang="ko"&gt;</tag-class>
+  <tag-class>&lt;head&gt;</tag-class>
+    <tag-class>&lt;meta charset="utf-8"&gt;</tag-class>
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;link rel="stylesheet" href="../resources/css/main.css"&gt;
+    <tag-class>&lt;title&gt;page title&lt;/title&gt;</tag-class>
+  <tag-class>&lt;/head&gt;</tag-class>
 
-            <tag-class>&lt;body&gt;</tag-class>
-              &lt;div class="base-skip"&gt;&lt;/div&gt;
-              &lt;div class="base-wrap"&gt;
-                &lt;header class="base-header"&gt;&lt;/header&gt;
-                &lt;div class="base-body"&gt;
-                  &lt;aside class="base-aside"&gt;&lt;/aside&gt;
-                  &lt;main class="base-main"&gt;&lt;/main&gt;
-                &lt;/div&gt;
-                &lt;footer class="base-footer"&gt;&lt;/footer&gt;
-              &lt;/div&gt;
-              &lt;script src="../resources/js/ui.global.js"&gt;&lt;/script&gt;
-              &lt;script src="../resources/js/ui.common.js"&gt;&lt;/script&gt;
-              &lt;script&gt;
-              ((win, doc, undefined) => {
-                doc.addEventListener("DOMContentLoaded", () => {
-                  여기에 실행할 내용 입력
-                });
-              })(window, document);
-              &lt;/script&gt;
-            <tag-class>&lt;/body&gt;</tag-class>
-          <tag-class>&lt;/html&gt;</tag-class>
+  <tag-class>&lt;body&gt;</tag-class>
+    &lt;div class="base-skip"&gt;&lt;/div&gt;
+    &lt;div class="base-wrap"&gt;
+      &lt;header class="base-header"&gt;&lt;/header&gt;
+      &lt;div class="base-body"&gt;
+        &lt;aside class="base-aside"&gt;&lt;/aside&gt;
+        &lt;main class="base-main"&gt;&lt;/main&gt;
+      &lt;/div&gt;
+      &lt;footer class="base-footer"&gt;&lt;/footer&gt;
+    &lt;/div&gt;
+    &lt;script src="../resources/js/ui.global.js"&gt;&lt;/script&gt;
+    &lt;script src="../resources/js/ui.common.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+    ((win, doc, undefined) => {
+      doc.addEventListener("DOMContentLoaded", () => {
+        여기에 실행할 내용 입력
+      });
+    })(window, document);
+    &lt;/script&gt;
+  <tag-class>&lt;/body&gt;</tag-class>
+<tag-class>&lt;/html&gt;</tag-class>
         </code></pre>
       </section>
 
@@ -91,19 +91,19 @@
         <li>'use strict' 로 항상 엄격 모드에서 사용하여 잠재적인 오류를 막아준다.</li>
       </ul>
       <pre class="box-code mt-x4"><code class="html">
-        <tag-comment>//Javascript in page</tag-comment>
-        &lt;script&gt;
-        ((win, doc, undefined) => {
+<tag-comment>//Javascript in page</tag-comment>
+&lt;script&gt;
+((win, doc, undefined) => {
 
-          'use strict';
+  'use strict';
 
-          doc.addEventListener("DOMContentLoaded", () => {
-            여기에 실행할 내용 입력
-          });
-        })(window, document);
-        &lt;/script&gt;
+  doc.addEventListener("DOMContentLoaded", () => {
+    여기에 실행할 내용 입력
+  });
+})(window, document);
+&lt;/script&gt;
 
-        <tag-comment>//Javascript in js</tag-comment>
+<tag-comment>//Javascript in js</tag-comment>
         </code></pre>
     </article>
 
