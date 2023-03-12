@@ -7,6 +7,11 @@
     <article class="wrap-article">
       <h2 class="tit-m">Examples</h2>
       <div class="box-guide">
+
+        <UiTab :tab-data="tab1" @printsss="val => printMessage(val)"/>
+
+        <UiTab :tab-data="tab2" @printsss="val => printMessage(val)"/>
+
         <div class="ui-tab type-scroll " data-id="exeTab1">
           <guide></guide>
           <div class="ui-tab-btns">
@@ -189,17 +194,41 @@ dual 선택
   </main>
 </template>
 <script>
+import UiTab from '@/components/UiTab.vue'
+
 export default {
-  components: {},
+  name: 'tabView',
+  components: {
+    UiTab
+  },
   data() {
     return {
-      sampleData: ''
+      tab1: {
+        id: 'nnn',
+        tabs: [
+          { current: false, idx: 0, callback: 'callbackTab1', name: '탭1' },
+          { current: false, idx: 2, callback: 'callbackTab2', name: '탭2' },
+          { current: true, idx: 1, callback: 'callbackTab3', name: '탭3' }
+        ]
+      },
+      tab2: {
+        id: 'nnn',
+        tabs: [
+          { current: true, idx: 0, callback: 'callbackTab1s', name: 'tab1' },
+          { current: false, idx: 1, callback: 'callbackTab2s', name: 'tab2' },
+          { current: false, idx: 2, callback: 'callbackTab3s', name: 'tab3', src: 'aaa' }
+        ]
+      }
     }
   },
   setup() { },
   created() { },
   mounted() { },
   unmounted() { },
-  methods: {}
+  methods: {
+    printMessage (val) {
+      console.log('printMessage', val)
+    }
+  }
 }
 </script>
