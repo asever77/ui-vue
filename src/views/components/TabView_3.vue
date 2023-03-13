@@ -1,19 +1,29 @@
 <template>
-  <section class="ui-tab-pnl" data-tab="3">
-    <h2 class="tit-s ui-tab-tit">탭3 title</h2>
-    <p>탭3 content</p>
+  <section class="ui-tab-pnl selected">
+    <h2 class="tit-s ui-tab-tit">{{ pannelData.name }} title</h2>
+    <p>{{ pannelData.name }} content zz</p>
     <a href="#">더보기</a>
   </section>
 </template>
 <script>
-
 export default {
-  name: 'tabView1',
+  name: 'tabView3',
+  props: {
+    pannelData: {
+      type: Object
+    }
+  },
   components: { },
-  data() { },
+  data() {
+    return {
+      sample: null
+    }
+  },
   setup() { },
   created() { },
-  mounted() { },
+  mounted() {
+    console.log('in-panne3: ', this.pannelData)
+  },
   unmounted() { },
   methods: { }
 }

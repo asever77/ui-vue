@@ -52,55 +52,55 @@ export default {
       meunMap: {
         convention: {
           introduction: { name: 'introduction', link: '/' },
-          naming: { name: 'naming', link: '/naming' },
-          units: { name: 'units', link: '/units' }
+          naming: { name: 'naming', link: '/naming' }
+          // units: { name: 'units', link: '/units' }
         },
-        contents: {
-          typography: { name: 'typography', link: '/typography' },
-          color: { name: 'color', link: '/color' },
-          gap: { name: 'gap', link: '/gap' },
-          icon: { name: 'icon', link: '/icon' },
-          table: { name: 'table', link: '/table' },
-          list: { name: 'list', link: '/list' },
-          layout: { name: 'layout', link: '/layout' },
-          button: { name: 'button', link: '/button' }
-        },
+        // contents: {
+        //   typography: { name: 'typography', link: '/typography' },
+        //   color: { name: 'color', link: '/color' },
+        //   gap: { name: 'gap', link: '/gap' },
+        //   icon: { name: 'icon', link: '/icon' },
+        //   table: { name: 'table', link: '/table' },
+        //   list: { name: 'list', link: '/list' },
+        //   layout: { name: 'layout', link: '/layout' },
+        //   button: { name: 'button', link: '/button' }
+        // },
         components: {
-          formLayout: { name: 'formLayout', link: '/formLayout' },
-          input: { name: 'input', link: '/input' },
-          accordion: { name: 'accordion', link: '/accordion' },
-          dropdown: { name: 'dropdown', link: '/dropdown' },
-          floating: { name: 'floating', link: '/floating' },
-          floatingRange: { name: 'floatingRange', link: '/floatingRange' },
-          modal: { name: 'modal', link: '/modal' },
-          scrollBar: { name: 'scrollBar', link: '/scrollBar' },
-          loading: { name: 'loading', link: '/loading' },
-          tab: { name: 'tab', link: '/tab' },
-          tableScroll: { name: 'tableScroll', link: '/tableScroll' },
-          popup: { name: 'popup', link: '/popup' },
-          tooltip: { name: 'tooltip', link: '/tooltip' },
-          datePicker: { name: 'datePicker', link: '/datePicker' },
-          select: { name: 'select', link: '/select' },
-          selection: { name: 'selection', link: '/selection' },
-          toast: { name: 'toast', link: '/toast' },
-          parallax: { name: 'parallax', link: '/parallax' },
-          scrollMove: { name: 'scrollMove', link: '/scrollMove' },
-          jsonCodingList: { name: 'jsonCodingList', link: '/jsonCodingList' },
-          fileUpload: { name: 'fileUpload', link: '/fileUpload' },
-          range: { name: 'range', link: '/range' },
-          slide: { name: 'slide', link: '/slide' },
-          time: { name: 'time', link: '/time' }
-        },
-        a11y: {
-          a11y: { name: 'a11y', link: '/a11y' },
-          a11y1: { name: 'a11y1', link: '/a11y1' },
-          a11y2: { name: 'a11y2', link: '/a11y2' },
-          a11y3: { name: 'a11y3', link: '/a11y3' },
-          a11y4: { name: 'a11y4', link: '/a11y4' }
-        },
-        memory: {
-          issue: { name: 'issue', link: '/issue' }
+          // formLayout: { name: 'formLayout', link: '/formLayout' },
+          // input: { name: 'input', link: '/input' },
+          // accordion: { name: 'accordion', link: '/accordion' },
+          // dropdown: { name: 'dropdown', link: '/dropdown' },
+          // floating: { name: 'floating', link: '/floating' },
+          // floatingRange: { name: 'floatingRange', link: '/floatingRange' },
+          // modal: { name: 'modal', link: '/modal' },
+          // scrollBar: { name: 'scrollBar', link: '/scrollBar' },
+          // loading: { name: 'loading', link: '/loading' },
+          tab: { name: 'tab', link: '/tab1_1' }
+          // tableScroll: { name: 'tableScroll', link: '/tableScroll' },
+          // popup: { name: 'popup', link: '/popup' },
+          // tooltip: { name: 'tooltip', link: '/tooltip' },
+          // datePicker: { name: 'datePicker', link: '/datePicker' },
+          // select: { name: 'select', link: '/select' },
+          // selection: { name: 'selection', link: '/selection' },
+          // toast: { name: 'toast', link: '/toast' },
+          // parallax: { name: 'parallax', link: '/parallax' },
+          // scrollMove: { name: 'scrollMove', link: '/scrollMove' },
+          // jsonCodingList: { name: 'jsonCodingList', link: '/jsonCodingList' },
+          // fileUpload: { name: 'fileUpload', link: '/fileUpload' },
+          // range: { name: 'range', link: '/range' },
+          // slide: { name: 'slide', link: '/slide' },
+          // time: { name: 'time', link: '/time' }
         }
+        // a11y: {
+        //   a11y: { name: 'a11y', link: '/a11y' },
+        //   a11y1: { name: 'a11y1', link: '/a11y1' },
+        //   a11y2: { name: 'a11y2', link: '/a11y2' },
+        //   a11y3: { name: 'a11y3', link: '/a11y3' },
+        //   a11y4: { name: 'a11y4', link: '/a11y4' }
+        // },
+        // memory: {
+        //   issue: { name: 'issue', link: '/issue' }
+        // }
       },
       navOpen: false,
       version: 'v1.0.7 (2023-01-20)'

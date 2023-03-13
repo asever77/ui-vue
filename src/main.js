@@ -2,6 +2,6 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-// import '@/assets/scss/_main.scss'
+import global from '@/assets/js/global.js'
 
-createApp(App).use(store).use(router).mount('#app')
+createApp(App).use(store).use(router).use(global).mount('#app')

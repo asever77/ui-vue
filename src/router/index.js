@@ -16,12 +16,36 @@ const routes = [
     component: () => import(/* webpackChunkName: "convention" */ '@/views/convention/NamingView.vue')
   },
   {
-    path: '/tab',
+    path: '/tab1',
     name: 'tab',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "convention" */ '@/views/components/TabView.vue')
+    component: () => import(/* webpackChunkName: "components" */ '@/views/components/TabView.vue'),
+    children: [
+      {
+        path: '/tab1_1',
+        components: {
+          TabPannel: () => import(/* webpackChunkName: "components" */ '@/views/components/TabView_1.vue')
+        }
+      },
+      {
+        path: '/tab1_2',
+        components: {
+          TabPannel: () => import(/* webpackChunkName: "components" */ '@/views/components/TabView_2.vue')
+        }
+      },
+      {
+        path: '/tab1_3',
+        components: {
+          TabPannel: () => import(/* webpackChunkName: "components" */ '@/views/components/TabView_3.vue')
+        }
+      }
+    ]
+    // components: {
+    //   default: () => import(/* webpackChunkName: "components" */ '@/views/components/TabView.vue'),
+    //   TabPannel: () => import(/* webpackChunkName: "components" */ '@/views/components/TabView_1.vue')
+    // }
   }
 ]
 
