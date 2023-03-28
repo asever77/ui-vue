@@ -75,7 +75,7 @@ export default {
           // modal: { name: 'modal', link: '/modal' },
           // scrollBar: { name: 'scrollBar', link: '/scrollBar' },
           // loading: { name: 'loading', link: '/loading' },
-          tab: { name: 'tab', link: '/tab1_1' }
+          tab: { name: 'tab', link: '/tab1' }
           // tableScroll: { name: 'tableScroll', link: '/tableScroll' },
           // popup: { name: 'popup', link: '/popup' },
           // tooltip: { name: 'tooltip', link: '/tooltip' },

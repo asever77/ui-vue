@@ -3,34 +3,39 @@
     <div class="tit-wrap">
       <h1 class="tit-l">Tab</h1>
     </div>
-
-    <article class="wrap-article">
-      <h2 class="tit-m">Examples</h2>
-      <div class="box-guide">
-
-        <UiTab :tab-data="tab1" @tabCallback="val => tabCallback(val)"/>
-
-      </div>
-    </article>
+    <div class="box-guide">
+      <!-- tab compontent-->
+      <UiTab :tab-data="tab1" @tabAction="val => tabAction(val)"/>
+      <TabView1 :tab-data="tab1" tab-name="TabView1" :tab-selected="true"/>
+      <TabView2 :tab-data="tab1" tab-name="TabView2" :tab-selected="false"/>
+      <TabView3 :tab-data="tab1" tab-name="TabView3" :tab-selected="false"/>
+      <!-- //tab compontent-->
+    </div>
   </main>
 </template>
 <script>
 import UiTab from '@/components/UiTab.vue'
+import TabView1 from '@/views/components/TabView_1.vue'
+import TabView2 from '@/views/components/TabView_2.vue'
+import TabView3 from '@/views/components/TabView_3.vue'
 
 export default {
   name: 'tabView',
   components: {
-    UiTab
+    UiTab,
+    TabView1,
+    TabView2,
+    TabView3
   },
   data() {
     return {
       tab1: {
         id: 'tab1',
-        group: 'TabPannel',
+        current: 0,
         tabs: [
-          { current: false, callback: 'callbackTab1', name: '탭1', to: 'tab1_1' },
-          { current: true, callback: 'callbackTab2', name: '탭2', to: 'tab1_2' },
-          { current: false, callback: 'callbackTab3', name: '탭3', to: 'tab1_3' }
+          { idx: 0, name: '탭1', panel: 'TabView1', callback: 'callbackTab1' },
+          { idx: 1, name: '탭2', panel: 'TabView2', callback: 'callbackTab2' },
+          { idx: 2, name: '탭3', panel: 'TabView3', callback: '' }
         ]
       }
     }
@@ -38,36 +43,15 @@ export default {
   setup() { },
   created() { },
   mounted() {
-    console.log('mounted', window.netive)
-    window.netive.callback.tab.callbackTab1 = (v) => {
-      console.log('Global callback Tab1', v)
+    // tab callback : window.netive.callback.tab.{{name}}
+    window.netive.callback.tab.callbackTab1 = (tabInfo) => {
+      console.log('callback1', tabInfo)
     }
-    window.netive.callback.tab.callbackTab2 = (v) => {
-      console.log('Global callback Tab2', v)
-    }
-    window.netive.callback.tab.callbackTab3 = (v) => {
-      console.log('Global callback Tab3', v)
+    window.netive.callback.tab.callbackTab2 = (tabInfo) => {
+      console.log('callback2', tabInfo)
     }
   },
-  unmounted() {
-    console.log('unmounted', window.netive)
-  },
-  methods: {
-    tabCallback(tab) {
-      this[tab.callback](tab)
-    },
-    systempop(v) {
-      alert(v)
-    },
-    callbackTab1(val) {
-      console.log('methods callback Tab 1', val)
-    },
-    callbackTab2(val) {
-      console.log('methods callback Tab 2', val)
-    },
-    callbackTab3(val) {
-      console.log('methods callback Tab 3', val)
-    }
-  }
+  unmounted() { },
+  methods: {}
 }
 </script>

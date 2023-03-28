@@ -1,4 +1,4 @@
-((win, doc) => {
+(() => {
   'use strict'
 
   const global = 'netive'
@@ -12,6 +12,11 @@
   Global.callback = {
     tab(tabInfo) {
       tabInfo.callback && this.tab[tabInfo.callback](tabInfo)
+    }
+  }
+  Global.tab = {
+    action(tab) {
+      console.log(tab)
     }
   }
 })()

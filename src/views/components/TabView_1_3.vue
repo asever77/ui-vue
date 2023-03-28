@@ -1,13 +1,13 @@
 <template>
   <section class="ui-tab-pnl" :data-tab="tabData.id" :data-name="tabName" :data-selected="tabSelected">
-    <h2 class="tit-s ui-tab-tit">title2</h2>
+    <h2 class="tit-s ui-tab-tit">title1-3</h2>
     <a href="#">더보기</a>
   </section>
 </template>
 <script>
 
 export default {
-  name: 'Tab1View',
+  name: 'Tab2View',
   props: {
     tabData: {
       type: String

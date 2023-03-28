@@ -49,7 +49,7 @@
         &:focus {
             outline: none;
             
-            span {outline: 2px solid $black;}
+            span {border-bottom: 1px solid $black;}
         }
         &:first-child {border-left: 1px solid $gray200;}
         &[data-selected="true"],
@@ -58,8 +58,6 @@
             background: $white;
             color:$gray900;
             border-bottom: 1px solid $white;
-
-            span {border-bottom: 1px solid $black;}
         } 
     }
     &-pnls {
@@ -85,7 +83,7 @@
             opacity: 0;
             display: none;
         }
-
+        &[data-selected="true"],
         &.selected,
         &[aria-hidden='false']{
             visibility: visible;
