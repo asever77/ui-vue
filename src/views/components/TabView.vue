@@ -43,6 +43,7 @@ export default {
   setup() { },
   created() { },
   mounted() {
+    console.log(this.$store.state.message)
     // tab callback : window.netive.callback.tab.{{name}}
     window.netive.callback.tab.callbackTab1 = (tabInfo) => {
       console.log('callback1', tabInfo)

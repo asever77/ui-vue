@@ -1,5 +1,5 @@
 <template>
-   <main class="base-main">
+  <main class="base-main">
     <div class="tit-wrap">
       <h1 class="tit-l">Introduction</h1>
     </div>
@@ -207,6 +207,7 @@
 </template>
 <script>
 export default {
+  name: 'IntroductionView',
   components: {},
   data() {
     return {
