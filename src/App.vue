@@ -8,8 +8,8 @@
   </div>
 </template>
 <script>
-import HeaderView from '@/layouts/HeaderView.vue'
-import FooterView from '@/layouts/FooterView.vue'
+import HeaderView from '@/components/layouts/HeaderView.vue'
+import FooterView from '@/components/layouts/FooterView.vue'
 
 export default {
   components: {
