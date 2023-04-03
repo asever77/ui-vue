@@ -22,7 +22,7 @@ export default {
   setup() { },
   created() { },
   mounted() {
-    console.log(this.tabData)
+    console.log('callback2')
   },
   unmounted() { },
   methods: { }

@@ -36,7 +36,7 @@ export default {
   unmounted() {},
   methods: {
     async getList() {
-      this.proudctList = await this.$api('https://54b2d755-8747-4866-a76a-e23d99e41def.mock.pstmn.io/list', 'get')
+      this.proudctList = await this.$api('https://976f8d8d-5e23-433b-b4f7-f95d4195dc49.mock.pstmn.io/list', 'get')
     }
   }
 }

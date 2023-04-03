@@ -39,7 +39,6 @@ export default {
       }
 
       tabPanel.dataset.selected = true
-      window.netive.callback.tab(tabInfo)
     }
   }
 }

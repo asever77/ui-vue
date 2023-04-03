@@ -33,9 +33,9 @@ export default {
         id: 'tab1',
         current: 0,
         tabs: [
-          { idx: 0, name: '탭1', panel: 'TabView1', callback: 'callbackTab1' },
-          { idx: 1, name: '탭2', panel: 'TabView2', callback: 'callbackTab2' },
-          { idx: 2, name: '탭3', panel: 'TabView3', callback: '' }
+          { idx: 0, name: '탭1', panel: 'TabView1' },
+          { idx: 1, name: '탭2', panel: 'TabView2' },
+          { idx: 2, name: '탭3', panel: 'TabView3' }
         ]
       }
     }
@@ -44,13 +44,6 @@ export default {
   created() { },
   mounted() {
     console.log(this.$store.state.message)
-    // tab callback : window.netive.callback.tab.{{name}}
-    window.netive.callback.tab.callbackTab1 = (tabInfo) => {
-      console.log('callback1', tabInfo)
-    }
-    window.netive.callback.tab.callbackTab2 = (tabInfo) => {
-      console.log('callback2', tabInfo)
-    }
   },
   unmounted() { },
   methods: {}
